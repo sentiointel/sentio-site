@@ -1,0 +1,16 @@
+{
+  "name": "SENTIO",
+  "short_name": "SENTIO",
+  "description": "Attrition tolerant environmental intelligence.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "assets/sentio-favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml"
+    }
+  ]
+}

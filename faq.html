@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SENTIO FAQ - Environmental Intelligence Network</title>
+    <meta
+      name="description"
+      content="Frequently asked questions about SENTIO, its sensing capsules, SENTIO v0 software pilot, modular AI layer and attrition-tolerant deployment philosophy."
+    />
+    <link rel="canonical" href="https://sentiointel.com/faq.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sentiointel.com/faq.html" />
+    <meta property="og:title" content="SENTIO FAQ" />
+    <meta
+      property="og:description"
+      content="Questions and answers about SENTIO's attrition-tolerant sensing network, capsule role and software-defined intelligence layer."
+    />
+    <meta property="og:image" content="https://sentiointel.com/assets/SENTIO_logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="assets/sentio-favicon.svg?v=2" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="stylesheet" href="styles.css?v=sentio-bw-4" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html#top" aria-label="SENTIO home">
+        <img src="assets/sentio-logo-cropped.png" alt="SENTIO" />
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="index.html#system">System</a>
+        <a href="index.html#planner">Planner</a>
+        <a href="index.html#intelligence">Intelligence</a>
+        <a href="index.html#software">SENTIO v0</a>
+        <a class="is-active" href="faq.html">FAQ</a>
+        <a href="index.html#roadmap">Roadmap</a>
+      </nav>
+      <a class="nav-action" href="https://demo.sentiointel.com/dashboard/">Open v0</a>
+    </header>
+
+    <main class="subpage" id="top">
+      <section class="subpage-hero">
+        <div>
+          <img class="hero-logo" src="assets/sentio-logo-cropped.png" alt="SENTIO" />
+          <p class="eyebrow">Frequently asked questions</p>
+          <h1>How SENTIO works, what it proves and what it does not claim.</h1>
+          <p class="lede">
+            SENTIO is designed as a deployable environmental intelligence network: simple sensing capsules in the
+            field, interpretation in software and confidence built from distributed evidence.
+          </p>
+        </div>
+      </section>
+
+      <section class="section faq-section" aria-label="SENTIO FAQ">
+        <aside class="faq-intro">
+          <p class="eyebrow">FAQ</p>
+          <h2>Clear answers for technical, operational and startup conversations.</h2>
+          <p>
+            These answers describe the current concept and software pilot. Hardware claims are intentionally framed as
+            prototype direction, not certified field performance.
+          </p>
+        </aside>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>What is SENTIO?</summary>
+            <p>
+              SENTIO is an attrition-tolerant environmental intelligence network for places where fixed monitoring
+              infrastructure is unavailable, slow to install or unsafe to access. It combines low-cost sensing
+              capsules, deployable gateways and software-defined intelligence modules.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What does "attrition tolerant by design" mean?</summary>
+            <p>
+              The network does not depend on every capsule surviving, charging, transmitting or being recovered.
+              Capsule loss is treated as an expected operating condition. The system is designed around redundancy,
+              spatial coverage and network-level confidence rather than perfect individual node survival.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What does the capsule actually do?</summary>
+            <p>
+              The capsule is a data collection node. It collects compact environmental, acoustic, vibration, battery,
+              solar and radio-health telemetry. It is not intended to make final mission decisions by itself. Event
+              interpretation happens in the software layer.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Why is the intelligence in software instead of in every capsule?</summary>
+            <p>
+              Keeping the capsule simple lowers unit cost, reduces loss risk and limits exposure if a capsule is
+              damaged, lost or reverse-engineered. The software layer can combine readings across many capsules,
+              update interpretation modules and score confidence using wider network context.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What is SENTIO v0?</summary>
+            <p>
+              SENTIO v0 is the software pilot. It simulates a live capsule network, streams telemetry through a FastAPI
+              backend, applies River and scikit-learn anomaly models, calculates network confidence and displays the
+              results in a live dashboard with maps, charts, exports and explainable alerts.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Does SENTIO v0 use real sensors?</summary>
+            <p>
+              SENTIO v0 currently demonstrates the end-to-end software workflow with simulated pods and a live packet
+              tester. The packet tester is designed so future physical nodes can send compatible JSON telemetry into
+              the same processing path.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How is incident confidence calculated?</summary>
+            <p>
+              SENTIO treats a single abnormal reading as weak evidence. Confidence rises when local anomaly evidence,
+              model evidence, nearby capsule agreement and node health support the same interpretation. The simplified
+              logic is: blended anomaly evidence multiplied by neighbour validation and discounted by node health.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What AI modules could run on the same infrastructure?</summary>
+            <p>
+              The same capsule infrastructure can support different software modules, including wildfire monitoring,
+              pollution detection, SAR baseline awareness, biodiversity monitoring, infrastructure stress monitoring
+              and illegal logging indicators. The commercial idea is one physical network with selectable intelligence
+              modules.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is search-and-rescue a core claim?</summary>
+            <p>
+              SENTIO frames SAR as a support layer, not as a precise person-identification system. The goal is to help
+              prioritise search areas using human-activity or environmental disturbance indicators while avoiding
+              overclaiming exact individual location or identity.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Why not just install expensive permanent stations?</summary>
+            <p>
+              Permanent stations can be accurate but sparse, expensive and slow to deploy. SENTIO is aimed at rapid
+              situational coverage across remote, hazardous or temporary zones where perfect installation and perfect
+              recovery cannot be assumed.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What happens if capsules are lost or offline?</summary>
+            <p>
+              Missing nodes reduce coverage but do not automatically break the network. SENTIO v0 separates missing or
+              offline status from incident confidence, so a deployment can still produce useful evidence from the
+              remaining active capsules.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What is the next validation step after SENTIO v0?</summary>
+            <p>
+              The next step is a live node: one physical sensor package sending SENTIO-compatible telemetry into the
+              software pipeline. After that, the roadmap moves toward a small gateway deployment, outdoor power and
+              enclosure validation, and labelled field tests.
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <img src="assets/sentio-logo-cropped.png" alt="SENTIO" />
+      <span>Attrition tolerant by design</span>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="mailto:contact@sentiointel.com">contact@sentiointel.com</a>
+      </div>
+    </footer>
+
+    <div class="sentio-chatbot" data-chatbot>
+      <button class="chatbot-toggle" type="button" aria-label="Open SENTIO assistant" aria-expanded="false">
+        <span class="chatbot-toggle-mark"></span>
+        <span>Ask SENTIO</span>
+      </button>
+      <section class="chatbot-panel" aria-label="SENTIO assistant" aria-hidden="true">
+        <header class="chatbot-header">
+          <div>
+            <strong>SENTIO Assistant</strong>
+            <span>Project knowledge base</span>
+          </div>
+          <button class="chatbot-close" type="button" aria-label="Close SENTIO assistant">Close</button>
+        </header>
+        <div class="chatbot-messages" data-chat-messages></div>
+        <div class="chatbot-prompts" aria-label="Suggested SENTIO questions">
+          <button type="button" data-prompt="What is SENTIO?">What is SENTIO?</button>
+          <button type="button" data-prompt="Explain the incident confidence math">Confidence math</button>
+          <button type="button" data-prompt="What does the capsule do?">Capsule role</button>
+          <button type="button" data-prompt="What does SENTIO v0 prove?">v0 proof</button>
+        </div>
+        <form class="chatbot-form" data-chat-form>
+          <input
+            data-chat-input
+            type="text"
+            autocomplete="off"
+            placeholder="Ask about SENTIO..."
+            aria-label="Ask the SENTIO assistant"
+          />
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </div>
+    <script src="chatbot.js?v=sentio-assistant"></script>
+  </body>
+</html>

@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SENTIO - Attrition Tolerant Environmental Intelligence</title>
+    <meta
+      name="description"
+      content="SENTIO builds rapidly deployable, attrition-tolerant environmental intelligence networks for places where fixed monitoring infrastructure cannot reach."
+    />
+    <link rel="canonical" href="https://sentiointel.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sentiointel.com/" />
+    <meta property="og:title" content="SENTIO - Attrition Tolerant Environmental Intelligence" />
+    <meta
+      property="og:description"
+      content="Rapidly deployable environmental intelligence networks for remote, unsafe and under-instrumented environments."
+    />
+    <meta property="og:image" content="https://sentiointel.com/assets/SENTIO_logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="assets/sentio-favicon.svg?v=2" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="stylesheet" href="styles.css?v=sentio-bw-7" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="SENTIO home">
+        <img src="assets/sentio-logo-official.png" alt="SENTIO" />
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#system">System</a>
+        <a href="#planner">Planner</a>
+        <a href="#intelligence">Intelligence</a>
+        <a href="#software">SENTIO v0</a>
+        <a href="faq.html">FAQ</a>
+        <a href="#roadmap">Roadmap</a>
+      </nav>
+      <a class="nav-action" href="https://demo.sentiointel.com/dashboard/">Open v0</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="SENTIO hero">
+        <img class="hero-capsule" src="assets/sentio-capsule-matte.png" alt="" aria-hidden="true" />
+        <div class="hero-inner">
+          <img class="hero-logo" src="assets/sentio-logo-official.png" alt="SENTIO" />
+          <p class="eyebrow">Attrition tolerant by design</p>
+          <h1>Environmental intelligence where fixed infrastructure cannot reach.</h1>
+          <p class="lede">
+            SENTIO combines low-cost sensing capsules, deployable gateways and software-defined intelligence modules
+            to create rapid situational awareness in remote, unsafe or under-instrumented environments.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="https://demo.sentiointel.com/dashboard/">Launch SENTIO v0</a>
+            <a class="button secondary" href="#system">Explore system</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="metrics" aria-label="SENTIO concept metrics">
+        <div>
+          <strong>100 m</strong>
+          <span>target capsule spacing</span>
+        </div>
+        <div>
+          <strong>1 ha</strong>
+          <span>approximate area per capsule</span>
+        </div>
+        <div>
+          <strong>10 km2</strong>
+          <span>theoretical 1000-capsule coverage</span>
+        </div>
+        <div>
+          <strong>20%</strong>
+          <span>planned attrition tolerance</span>
+        </div>
+      </section>
+
+      <section id="planner" class="section planner-section" aria-label="SENTIO deployment planner">
+        <div class="planner-copy">
+          <p class="eyebrow">Deployment planner</p>
+          <h2>Estimate coverage, capsule count and attrition budget before a deployment.</h2>
+          <p>
+            SENTIO treats node loss as an expected operating condition. This public planner gives a high-level estimate
+            of capsule count, coverage density and planned redeployment buffer before running a full SENTIO v0
+            simulation.
+          </p>
+          <a class="button secondary" href="https://demo.sentiointel.com/dashboard/">Run full simulation</a>
+        </div>
+
+        <div class="planner-tool" data-planner>
+          <form class="planner-controls" aria-label="Deployment estimate controls">
+            <label>
+              <span>Area size</span>
+              <input data-planner-input="areaKm2" type="number" min="0.1" max="250" step="0.1" value="10" />
+              <em>km2</em>
+              <input
+                class="planner-range"
+                data-planner-range="areaKm2"
+                type="range"
+                min="0.1"
+                max="250"
+                step="0.1"
+                value="10"
+                aria-label="Area size"
+              />
+            </label>
+            <label>
+              <span>Capsule spacing</span>
+              <input data-planner-input="spacingM" type="number" min="40" max="250" step="10" value="100" />
+              <em>metres</em>
+              <input
+                class="planner-range"
+                data-planner-range="spacingM"
+                type="range"
+                min="40"
+                max="250"
+                step="10"
+                value="100"
+                aria-label="Capsule spacing"
+              />
+            </label>
+            <label>
+              <span>Capsule cost</span>
+              <input data-planner-input="costGbp" type="number" min="5" max="250" step="1" value="30" />
+              <em>GBP</em>
+              <input
+                class="planner-range"
+                data-planner-range="costGbp"
+                type="range"
+                min="5"
+                max="250"
+                step="1"
+                value="30"
+                aria-label="Capsule cost"
+              />
+            </label>
+            <label>
+              <span>Attrition buffer</span>
+              <input data-planner-input="attritionPercent" type="number" min="0" max="60" step="1" value="20" />
+              <em>percent</em>
+              <input
+                class="planner-range"
+                data-planner-range="attritionPercent"
+                type="range"
+                min="0"
+                max="60"
+                step="1"
+                value="20"
+                aria-label="Attrition buffer"
+              />
+            </label>
+          </form>
+
+          <div class="planner-results" aria-live="polite">
+            <div>
+              <span>Base capsules</span>
+              <strong data-planner-output="baseCapsules">1000</strong>
+            </div>
+            <div>
+              <span>Deployment budget</span>
+              <strong data-planner-output="deploymentBudget">GBP 36,000</strong>
+            </div>
+            <div>
+              <span>120% deployment count</span>
+              <strong data-planner-output="bufferedCapsules">1200</strong>
+            </div>
+            <div>
+              <span>Planned loss capacity</span>
+              <strong data-planner-output="lossCapacity">200 pods</strong>
+            </div>
+          </div>
+
+          <div class="planner-map" aria-label="Simplified coverage density preview" data-planner-map></div>
+
+          <p class="planner-note" data-planner-output="summary">
+            At 100 m spacing, each capsule represents approximately 1.00 ha of nominal coverage.
+          </p>
+        </div>
+      </section>
+
+      <section id="system" class="section system-section">
+        <div class="section-heading">
+          <p class="eyebrow">System</p>
+          <h2>Many simple nodes. One software-defined intelligence layer.</h2>
+          <p>
+            SENTIO is designed around coverage, redundancy and field realism. Capsules collect compact telemetry.
+            Gateways forward packets. The software layer interprets distributed evidence.
+          </p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature">
+            <span>01</span>
+            <h3>Core capsules</h3>
+            <p>
+              Low-cost nodes collect environmental, acoustic, vibration, battery, solar and radio-health data.
+            </p>
+          </article>
+          <article class="feature">
+            <span>02</span>
+            <h3>Deployable gateway</h3>
+            <p>
+              A gateway receives capsule packets and forwards them through LTE, Ethernet or later satellite backhaul.
+            </p>
+          </article>
+          <article class="feature">
+            <span>03</span>
+            <h3>SENTIO platform</h3>
+            <p>
+              The backend stores telemetry, tracks node health, maps pods and calculates operational confidence.
+            </p>
+          </article>
+          <article class="feature">
+            <span>04</span>
+            <h3>AI modules</h3>
+            <p>
+              Different software modules interpret the same physical telemetry for different missions.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="band">
+        <div>
+          <p class="eyebrow">Design principle</p>
+          <h2>The network is designed to lose nodes.</h2>
+        </div>
+        <p>
+          SENTIO does not depend on every capsule surviving, charging, transmitting or being recovered. Individual
+          capsules can be lost, shaded, blocked, damaged or offline without the entire network failing.
+        </p>
+      </section>
+
+      <section id="intelligence" class="section">
+        <div class="section-heading narrow">
+          <p class="eyebrow">Intelligence</p>
+          <h2>Confidence is built from agreement, not a single reading.</h2>
+          <p>
+            A single capsule anomaly is weak evidence. SENTIO becomes stronger when multiple nearby capsules and
+            multiple sensor types point toward the same event.
+          </p>
+        </div>
+        <div class="signal-layout">
+          <div class="signal-stack">
+            <span>Raw telemetry packet</span>
+            <span>Local anomaly score</span>
+            <span>Model evidence</span>
+            <span>Neighbour agreement</span>
+            <span>Health discounting</span>
+            <span>Incident confidence</span>
+          </div>
+          <div class="module-list">
+            <article>
+              <h3>Wildfire</h3>
+              <p>Heat rise, humidity drop, VOC shift, acoustic disturbance and local agreement.</p>
+            </article>
+            <article>
+              <h3>Pollution</h3>
+              <p>Air-pattern anomalies, pressure and humidity context, spatial clustering.</p>
+            </article>
+            <article>
+              <h3>SAR baseline</h3>
+              <p>Human-activity awareness and search-area prioritisation without person identification claims.</p>
+            </article>
+            <article>
+              <h3>Infrastructure</h3>
+              <p>Vibration, movement and environmental stress trends for remote assets.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="software" class="section software-section">
+        <div class="software-copy">
+          <p class="eyebrow">SENTIO v0</p>
+          <h2>A working software pilot before field hardware.</h2>
+          <p>
+            SENTIO v0 demonstrates the live dashboard, simulated capsule network, expected node loss, River and
+            scikit-learn anomaly scoring, network confidence, explainable alerts and exportable evidence.
+          </p>
+          <div class="hero-actions compact">
+            <a class="button primary" href="https://demo.sentiointel.com/dashboard/">Open dashboard</a>
+            <a class="button secondary" href="#roadmap">Validation path</a>
+          </div>
+        </div>
+        <div class="terminal-preview" aria-label="SENTIO v0 stack preview">
+          <div class="terminal-bar">
+            <span></span>
+            <span></span>
+            <span></span>
+            <p>sentio-v0 / live stack</p>
+          </div>
+          <dl>
+            <dt>Backend</dt>
+            <dd>FastAPI + WebSocket</dd>
+            <dt>Models</dt>
+            <dd>River + scikit-learn</dd>
+            <dt>Map</dt>
+            <dd>React + MapLibre</dd>
+            <dt>Exports</dt>
+            <dd>CSV, TXT and PDF evidence</dd>
+          </dl>
+        </div>
+      </section>
+
+      <section id="roadmap" class="section roadmap-section">
+        <div class="section-heading">
+          <p class="eyebrow">Validation path</p>
+          <h2>From software proof to field deployment.</h2>
+        </div>
+        <ol class="roadmap">
+          <li>
+            <strong>v0</strong>
+            <span>Simulated capsules, dashboard, anomaly scoring and network confidence.</span>
+          </li>
+          <li>
+            <strong>Live node</strong>
+            <span>One physical sensor node sending SENTIO-compatible telemetry.</span>
+          </li>
+          <li>
+            <strong>Field gateway</strong>
+            <span>Three to five capsules with outdoor LoRa, power and enclosure validation.</span>
+          </li>
+          <li>
+            <strong>Small deployment</strong>
+            <span>Real terrain, real attrition, exportable evidence and operational review.</span>
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <img src="assets/sentio-logo-official.png" alt="SENTIO" />
+      <span>Attrition tolerant by design</span>
+      <div class="footer-links">
+        <a href="faq.html">FAQ</a>
+        <a href="mailto:contact@sentiointel.com">contact@sentiointel.com</a>
+      </div>
+    </footer>
+
+    <div class="sentio-chatbot" data-chatbot>
+      <button class="chatbot-toggle" type="button" aria-label="Open SENTIO assistant" aria-expanded="false">
+        <span class="chatbot-toggle-mark"></span>
+        <span>Ask SENTIO</span>
+      </button>
+      <section class="chatbot-panel" aria-label="SENTIO assistant" aria-hidden="true">
+        <header class="chatbot-header">
+          <div>
+            <strong>SENTIO Assistant</strong>
+            <span>Project knowledge base</span>
+          </div>
+          <button class="chatbot-close" type="button" aria-label="Close SENTIO assistant">Close</button>
+        </header>
+        <div class="chatbot-messages" data-chat-messages></div>
+        <div class="chatbot-prompts" aria-label="Suggested SENTIO questions">
+          <button type="button" data-prompt="What is SENTIO?">What is SENTIO?</button>
+          <button type="button" data-prompt="Explain the incident confidence math">Confidence math</button>
+          <button type="button" data-prompt="What does the capsule do?">Capsule role</button>
+          <button type="button" data-prompt="What does SENTIO v0 prove?">v0 proof</button>
+        </div>
+        <form class="chatbot-form" data-chat-form>
+          <input
+            data-chat-input
+            type="text"
+            autocomplete="off"
+            placeholder="Ask about SENTIO..."
+            aria-label="Ask the SENTIO assistant"
+          />
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </div>
+    <script src="planner.js?v=sentio-planner-1"></script>
+    <script src="chatbot.js?v=sentio-assistant"></script>
+  </body>
+</html>
